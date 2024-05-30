@@ -20,7 +20,7 @@
     "test:unit:watch": "cross-env TEST=unit nyc ava --config ava.config.cjs --watch",
     "test:e2e": "cross-env TEST=e2e ava --config ava.config.cjs ./test/e2e/**/*",
     "test": "npm run test:unit & npm run test:e2e",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc --reporter=lcov --reporter=text-lcov --all check-coverage --lines 100"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
